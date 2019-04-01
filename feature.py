@@ -9,7 +9,7 @@ import os
 
 #folder containg the unzipped files
 
-raw_folder = '/home/user/project/vitalv/voice-gender-classifier/raw'
+raw_folder = '/home/user/project/raw'
 
 
 #a list with the names of the uncompressed folders that contain the audio files
@@ -148,6 +148,7 @@ def get_frequencies(sample_wav_folder):
         frequencies_lol.append(filtered_frequencies)
 
     frequencies = [item for sublist in frequencies_lol for item in sublist]
+    #print(len(frequencies))
     #print(frequencies)
     return frequencies
 
@@ -167,6 +168,7 @@ for i in range(n_samples):
     if os.path.isfile(readme_file):
             gender, age_range, pronunciation = get_metadata(readme_file)
     gender, age_range, pronunciation = homogenize_format(gender, age_range, pronunciation)
+    
         
     #Read and extract the information from the wav files:        
     if os.path.isdir(sample_wav_folder): #some of the samples don't contain a wav folder (Ex: 'LunaTick-20080329-vf1')
@@ -190,5 +192,5 @@ for i in range(n_samples):
             myData.loc[i] = pd.Series(sample_dict)
         
     #and store it to a file
-    myData.to_csv('RRN.csv')
+    myData.to_csv('features.csv')
 
