@@ -3,7 +3,6 @@
                                                       ####Training###########
 ###############################################################################################################################################
 #Random Forest
-
 import pandas as pd
 import numpy as np
 from sklearn import metrics
