@@ -23,7 +23,7 @@ X_train, X_test, y_train, y_test = train_test_split(features_raw, predict_class,
 
 print ("Training set has {} samples.".format(X_train.shape[0]))
 print ("Testing set has {} samples.".format(X_test.shape[0]))
-print(y_train)
+#print(y_train)
 
 tree = DecisionTreeClassifier(random_state=0).fit(X_train, y_train)
 print("Decision Tree")
