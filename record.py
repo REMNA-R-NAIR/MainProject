@@ -37,7 +37,6 @@ def callback():
     p.terminate()
     
  
-
     wf = wave.open(FILENAME, 'wb')
     wf.setnchannels(CHANNELS)
     wf.setsampwidth(p.get_sample_size(FORMAT))
