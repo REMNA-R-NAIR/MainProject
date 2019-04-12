@@ -94,8 +94,6 @@ X_test=test_raw
 
 # Applying desicion tree
 
-import sklearn
-from sklearn import svm
 
 C = 1.0
 #svc = svm.SVC(kernel='linear',C=C,gamma=2)
