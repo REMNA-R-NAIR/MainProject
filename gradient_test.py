@@ -97,7 +97,7 @@ from sklearn.metrics import fbeta_score
 predictions_test = gbrt.predict(X_test)
 predictions_test
 #predictions_test
-    #predictions_test
+    
 
 if(predictions_test[0]==1):
     print("Male")
